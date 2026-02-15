@@ -54,8 +54,27 @@ class Stack:
 # input (10+2)*5-5((7-1)/2+9)
 # output 괄호짝이 맞으면 True, 아니면 False
 def check_brackets():
-    # TODO: 구현
-    print(1)
+    inspect_string = input("input: ")
+
+    stack = Stack(len(inspect_string))
+    for s in inspect_string:
+        if s == "(":
+            stack.push(s)
+        elif s == ")":
+            if stack.isEmpty():
+                print("false")
+                return
+            stack.pop()
+        else:
+            continue
+
+    if not stack.isEmpty():
+        print("false")
+        return
+
+    print("true")
+
+    return
 
 if __name__ == "__main__":
     check_brackets()
