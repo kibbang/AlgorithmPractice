@@ -48,6 +48,13 @@ class Stack:
     def display(self):
         for i in range(self.top+1):
             print(self.array[i], " ", end="")
+        print()
+
+    # 스택의 상단 요소를 들여다보는 peek
+    def peek(self):
+        if not self.isEmpty():
+            return self.array[self.top]
+        return None
 
 # 문제 > 괄호 짝 맞추기
 # 입력된 수식에서 왼쪽 여는 괄호와 오른쪽 닫는 괄호의 짝이 맞는지 체크

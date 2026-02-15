@@ -2,7 +2,6 @@ from pprint import pprint
 
 from algorithm_lecture.stack.Stack import Stack
 
-
 def main():
     size = 10
     s1 = create_stack(size)
